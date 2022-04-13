@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 30%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  /* padding: 8px 80px 10px 10px; */
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+    </style>
+</head>
+
+<body>
+<div class="flex-container">
+<div>
+    
+
+<h1>{{ans.quetion}}</h1>
+{% for i in ans %}
+<h2 id="ans"><li>{{i}}</li></h2>
+{% endfor %}
+  
+</div>
+<div>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Quetion</th>
+  </tr>
+  {% for i in q %}
+  <tr>
+    <td>{{i.id}}</td>
+    <td><a href="{% url 'get_answer2' i.id %}">{{i.quetion}}</a></td>
+  </tr>
+  {% endfor %}
+</table>
+</div>         
+</body>
+</html>
+
+
+</body>
+
+
+</html>
+</html>
